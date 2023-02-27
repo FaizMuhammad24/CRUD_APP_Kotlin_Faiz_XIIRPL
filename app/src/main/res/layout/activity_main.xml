@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="#F9F8EB">
+
+    <TextView
+        android:id="@+id/judul"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:fontFamily="sans-serif"
+        android:text="Profile User"
+        android:textColor="#76B39D"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layoutName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/judul"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_margin="20dp"
+        >
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/InputName"
+            android:hint="Enter Nama"
+            android:textColorHighlight="#76B39D"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layoutAge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layoutName"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        >
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/inputAge"
+            android:hint="Enter Age"
+            android:textColorHighlight="#76B39D"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/btnAdd"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layoutAge"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="@color/teal_700"
+        android:text="Add" />
+
+    <Button
+        android:id="@+id/btnPrint"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layoutAge"
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="@color/teal_700"
+        android:text="Print" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/btnAdd"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/textId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_margin="20dp"
+                android:text="ID\n\n"
+                android:textSize="22sp"
+                android:textAlignment="center"
+                android:padding="10dp"
+                android:textColor="#76B39D"
+                />
+            <TextView
+                android:id="@+id/textname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_margin="20dp"
+                android:text="Name\n\n"
+                android:textSize="22sp"
+                android:textAlignment="center"
+                android:padding="10dp"
+                android:textColor="#76B39D"
+                />
+            <TextView
+                android:id="@+id/textAge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_margin="20dp"
+                android:text="Age\n\n"
+                android:textSize="22sp"
+                android:textAlignment="center"
+                android:padding="10dp"
+                android:textColor="#76B39D"
+                />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+
+
+</RelativeLayout>
